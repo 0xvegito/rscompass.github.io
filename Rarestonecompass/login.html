@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Rarestonecompass/css/login.css">
+    <title>Login Page</title>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if the provided username and password match the generic credentials
+            if (username === "rarestone" && password === "compass1234") {
+                alert("Login successful! Redirecting...");
+                // You can redirect the user to another page here.
+                // For example, window.location.href = "dashboard.html";
+                (window.location.href="index.html");
+            } else {
+                alert("Login failed. Please check your credentials.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+</body>
+</html>
